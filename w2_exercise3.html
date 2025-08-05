@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      background-color: #ffffff;
+      padding: 25px;
+      width: 350px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    textarea {
+      resize: vertical;
+    }
+    .satisfaction {
+      margin-bottom: 15px;
+    }
+    .satisfaction label {
+      font-weight: normal;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <form>
+    <label>Name:
+      <input type="text" name="name" required>
+    </label>
+
+    <label>Email:
+      <input type="email" name="email" required>
+    </label>
+
+    <label>Feedback:
+      <textarea name="feedback" rows="4" required></textarea>
+    </label>
+
+    <div class="satisfaction">
+      Satisfaction Level:<br>
+      <label><input type="radio" name="satisfaction" value="Satisfied"> Satisfied</label><br>
+      <label><input type="radio" name="satisfaction" value="Neutral"> Neutral</label><br>
+      <label><input type="radio" name="satisfaction" value="Unsatisfied"> Unsatisfied</label>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
