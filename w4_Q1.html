@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;     /* Center vertically */
+            height: 100vh;           /* Full page height */
+            margin: 0;               /* Remove default margin */
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        #output {
+            border: 2px solid black;
+            padding: 20px;
+            text-align: center;
+            background: white;
+            border-radius: 8px;
+            min-width: 200px;
+        }
+        *{
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h3>Numbers from 1 to N:</h3>
+    <div id="output" ></div>
+
+
+    <script>
+        let n = parseInt(prompt("Enter a number:"));
+
+        let display = document.getElementById("output");
+        for (let i = 0; i <= n; i++){
+            display.innerText += i + " ";
+        }
+    </script>
+</body>
+</html>

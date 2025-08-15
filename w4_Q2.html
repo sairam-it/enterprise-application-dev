@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication of a given number</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;     /* Center vertically */
+            height: 100vh;           /* Full page height */
+            margin: 0;               /* Remove default margin */
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        #mulTab {
+            border: 2px solid black;
+            padding: 20px;
+            text-align: center;
+            background: white;
+            border-radius: 8px;
+            min-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Multiplication Table</h2>
+    <div id="mulTab"></div>
+
+    <script>
+        let n = parseInt(prompt("Enter a number:"))
+
+        let tab = document.getElementById("mulTab");
+        for (let i = 1; i <= 10; i++){
+            tab.innerHTML += `${n} X ${i} = ${n * i}` + "<br><br>";
+        }
+    </script>
+</body>
+</html>
