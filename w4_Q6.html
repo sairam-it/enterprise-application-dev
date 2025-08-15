@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(242, 237, 175);
+            margin-top: 100px;
+            padding: 20px;
+            border: 10px solid rgb(195, 103, 11);
+            display: inline-block;
+            border-radius: 20px;
+        }
+        *{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reverse A Given Number:</h1>
+    <div id = "rev"></div>
+
+    <script>
+        let n = parseInt(prompt("Enter a number to reverse: "))
+
+        let revNum = document.getElementById("rev");
+        function revN(num){
+            let sign = Math.sign(num); 
+            num = Math.abs(num); 
+
+            let newNum = 0;
+            while (num > 0) {
+                let last = num % 10;
+                newNum = newNum * 10 + last;
+                num = Math.floor(num / 10);
+            }
+            return sign * newNum;
+        }
+        revNum.innerHTML = `Reverse of ${n} is: ${revN(n)}`;
+    </script>
+</body>
+</html>
