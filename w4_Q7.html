@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+    <style>
+        * {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fibonacci Series up to N terms</h1>
+    <p>
+        Enter a number to find Fibonacci Series up to N terms:
+        <input type="number" id="InputNum" placeholder="Enter a number">
+    </p>
+    <button onclick="fib()">Fib Series</button>
+    <div id="fib" style="margin-top: 15px; font-size: 18px;"></div>
+    
+    <script>
+        function fib() {
+            let n = parseInt(document.getElementById("InputNum").value);
+            let series = document.getElementById("fib");
+
+            series.innerHTML = "";
+
+            if (isNaN(n) || n <= 0) {
+                series.innerHTML = "⚠ Please enter a positive number.";
+                return;
+            }
+
+            let a = 0, b = 1;
+            series.innerHTML += a + " ";
+
+            if (n > 1) {
+                series.innerHTML += b + " ";
+            }
+
+            for (let i = 3; i <= n; i++) {
+                let c = a + b;
+                a = b;
+                b = c;
+                series.innerHTML += c + " ";
+            }
+        }
+    </script>
+</body>
+</html>
