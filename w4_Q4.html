@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           margin-top: 100px;
+           padding: 30px;
+           border: 5px solid rgb(207, 120, 248);
+           border-radius: 10px;
+           display: inline-block;
+        }
+        *{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            color: coral;
+
+
+        }
+        #even{
+            white-space: pre-wrap;
+            color: rgb(32, 218, 162);
+        }
+    </style>
+</head>
+<body>
+    <h2>Even numbers from 1 to 50:</h2>
+    <div id = "even"></div>
+
+
+    <script>
+        let evenNo = document.getElementById("even");
+
+        for (let i = 0; i <= 50; i++){
+            if (i % 2 == 0){
+                evenNo.innerHTML += i + "    ";
+            }
+        }
+        
+    </script>
+</body>
+</html>
