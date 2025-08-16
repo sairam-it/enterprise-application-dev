@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse a string</title>
+    <style>
+        * {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>String in Reverse Order</h1>
+    <p>
+        Enter a string to reverse it:
+        <input type="text" id="InputStr" placeholder="Enter a string">
+    </p>
+    <button onclick="reverseString()">Reverse String</button>
+    <div id="result" style="margin-top: 15px; font-size: 18px;"></div>
+
+    <script>
+        function reverseString() {
+            let str = document.getElementById("InputStr").value;
+            let resultDiv = document.getElementById("result");
+
+            resultDiv.innerHTML = "";
+
+            if (str.trim() === "") {
+                resultDiv.innerHTML = "⚠ Please enter a valid string.";
+                return;
+            }
+
+            let reversedStr = str.split('').reverse().join('');
+            resultDiv.innerHTML = `The reversed string is: ${reversedStr}`;
+        }
+    </script>
+</body>
+</html>

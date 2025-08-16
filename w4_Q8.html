@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number of digits</title>
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Number of digits in a given number</h1>
+    <p>
+        Enter a number to count its digits:
+        <input type="number" id="InputNum" placeholder="Enter a number">
+    </p>
+    <button onclick="countDigits()">Count Digits</button>
+    <div id="result" style="margin-top: 15px; font-size: 18px;"></div>
+
+    <script>
+        function countDigits() {
+            let n = parseInt(document.getElementById("InputNum").value);
+            let resultDiv = document.getElementById("result");
+
+            resultDiv.innerHTML = "";
+
+            if (isNaN(n) || n < 0) {
+                resultDiv.innerHTML = "⚠ Please enter a non-negative number.";
+                return;
+            }
+
+            let count = n.toString().length;
+            resultDiv.innerHTML = `The number of digits in ${n} is: ${count}`;
+        }
+    </script>
+</body>
+</html>
